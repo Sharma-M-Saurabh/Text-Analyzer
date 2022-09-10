@@ -14,3 +14,13 @@ code {
 .navbar-default .navbar-nav > li > a {
   color: white;
 }
+
+.form-control{
+  width: 500px;
+}
+
+.app{
+  margin-left: 250px;
+  margin-top: 90px;
+
+}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './About.css'
 
 export default function About() {
   const [Mystyle , SetMystyle] = useState({
@@ -7,26 +8,26 @@ export default function About() {
 
   })
 
-  const [btn , setbtn] = useState("Enable Dark Mode")
+  const [bttn , setbtn] = useState("Enable Dark Mode");
 
 
-  const ToggleStyle = ()=>{
+  const ToggleStyle=()=>{
     if(Mystyle.color === 'black'){
       SetMystyle({
         color : 'white',
-        backgroundColor : '#042743',
+        backgroundColor : 'black',
         border : '1px solid white'
 
       })
-      setbtn("Enable Light Mode")
+      setbtn("Enable Light Mode");
     }
     else{
       SetMystyle({
-        color : '#042743',
+        color : 'black',
         backgroundColor : 'white'
         
       })
-      setbtn("Enable Dark Mode")
+      setbtn("Enable Dark Mode");
 
     }
   }
@@ -40,7 +41,7 @@ export default function About() {
   return (
       <>
       
-     
+     <div className='Sample'>Div 1</div>
       
     <div className='container' style={Mystyle}>
     <h1>About Us</h1>
@@ -83,12 +84,12 @@ export default function About() {
   </div>
 </div>
 <div className="conatiner my-3">
-    <button type='button' onClick={ToggleStyle} className='btn btn-primary'>{btn}</button>
+    <button  onClick={ToggleStyle} className="btn btn-primary" type='button'>{bttn}</button>
 </div>
     </div>
     </>
     
-  )
+  );
 }
   
 
